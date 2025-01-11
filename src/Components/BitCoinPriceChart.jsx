@@ -9,17 +9,18 @@ function Crypto() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const API_URL="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true"
-        const response = await axios.get(API_URL);
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true"
+        );
         setCryptoData(response.data.bitcoin);
       } catch (error) {
-        console.error("Error fetching crypto data:", error);
+        console.error("no able to fetch data from API :", error);
       }
     };
 
     fetchData();
 
-    const interval = setInterval(fetchData, 1000);
+    const interval = setInterval(fetchData, 60000);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,7 +29,7 @@ function Crypto() {
     <div className="bg-white h-max rounded-lg my-5 p-6">
       <div className="flex items-center">
         <div>
-          <img src='btc.png'className="w-9" alt="Bitcoin" />
+          <img src='BitcoinImage.png'className="w-9" alt="Bitcoin" />
         </div>
         <div className="text-2xl font-semibold text-[#0B1426] pl-2">
           Bitcoin
@@ -98,7 +99,7 @@ function Crypto() {
         </div>
       </div>
       <div className="lg:h-[420px] h-[300px]">
-        <TradingView/>
+        <TradingView />
       </div>
     </div>
   );

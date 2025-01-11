@@ -45,7 +45,7 @@ const Suggestion=()=> {
 }
 
 const  CryptoCard=({ cryptoData })=> {
-  console.log("Sparkline URL:", cryptoData.sparkline);
+//   console.log("Sparkline URL:", cryptoData.sparkline);
 
   return (
     <div className="lg:w-[300px] rounded-2xl p-5 border-2 my-2 mr-2">

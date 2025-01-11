@@ -1,4 +1,7 @@
+
+
 import Navbar from "./Components/Navbar"
+import KoinXfinalPage from "./Pages/KoinXfinalPage"
 
 
 function App() {
@@ -6,7 +9,8 @@ function App() {
 
   return (
     <>
-       <Navbar/>
+       <Navbar/> 
+       <KoinXfinalPage/>
     </>
   )
 }
