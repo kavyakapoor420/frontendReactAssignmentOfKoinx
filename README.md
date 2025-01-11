@@ -21,7 +21,7 @@ This project implements a Bitcoin Dashboard as per the provided [Figma design](h
    - Fetches the top 3 trending coins using Coingecko's `/search/trending` API.
    - Displays coin logo, name, and symbol.
 
-4. **You May Also Like**:
+4. ** Also** :
    - Displays trending coin details such as logo, symbol, price, 24-hour change, and a price graph.
    - Uses the `sparkline` data from the API for price graphs.
    - Presented as a horizontally scrollable carousel.
